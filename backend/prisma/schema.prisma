@@ -8,20 +8,30 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  name      String
-  password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  refreshTokens RefreshToken[]
+  id       Int      @id @default(autoincrement())
+  name String   @unique
+  email    String   @unique
+  password String
+  reviews  Review[]
 }
 
-model RefreshToken {
+model Series {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  genre       String
+  releaseYear Int
+  posterUrl   String?
+  reviews     Review[]
+}
+
+model Review {
   id        Int      @id @default(autoincrement())
-  token     String   @unique
-  user      User     @relation(fields: [userId], references: [id])
-  userId    Int
-  revoked   Boolean  @default(false)
+  rating    Int
+  comment   String
   createdAt DateTime @default(now())
+  userId    Int
+  seriesId  Int
+  user      User     @relation(fields: [userId], references: [id])
+  series    Series   @relation(fields: [seriesId], references: [id])
 }
