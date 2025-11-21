@@ -3,8 +3,9 @@ services:
     name: capstonsem3-backend
     runtime: node
     plan: free
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm run start
+    root: backend
+    buildCommand: npm install
+    startCommand: npm run start
     envVars:
       - key: NODE_ENV
         value: production
@@ -18,3 +19,4 @@ services:
         value: https://capstonsem3-nzeg.vercel.app
       - key: PORT
         value: "8080"
+
