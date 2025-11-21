@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: capstonsem3-backend
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: REFRESH_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://capstonsem3-nzeg.vercel.app
+      - key: PORT
+        value: "8080"
