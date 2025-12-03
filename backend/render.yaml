@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: capstonsem3-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        scope: build
+      - key: JWT_SECRET
+        scope: build
+      - key: REFRESH_TOKEN_SECRET
+        scope: build
+      - key: PORT
+        value: 8001
