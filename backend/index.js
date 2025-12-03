@@ -21,6 +21,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "https://capstonsem3-76fq.vercel.app",
   "https://capstonsem3-nzeg.vercel.app",
+  "https://capstonsem3-dsd8.vercel.app",
   "https://capstonsem3-1.onrender.com",
 ];
 
