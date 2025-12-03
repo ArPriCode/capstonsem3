@@ -45,7 +45,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-  res.send("Backend is running successfully.");
+  res.json({ message: "Backend is running successfully.", timestamp: new Date() });
 });
 
 /* ====================================
