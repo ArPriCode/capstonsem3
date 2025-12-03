@@ -1,7 +1,7 @@
 let ENDPOINT = 'http://localhost:8001';
 
 if (import.meta.env.PROD) {
-  ENDPOINT = 'http://localhost:8001';
+  ENDPOINT = 'https://capstonsem3-1.onrender.com';
 } else if (import.meta.env.MODE === 'development') {
   ENDPOINT = 'http://localhost:8001';
 }
