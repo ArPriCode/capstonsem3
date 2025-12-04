@@ -9,6 +9,7 @@ Includes authentication, cart CRUD, order management, Prisma ORM, secure CORS, a
 # 🌐 Live URLs
 
 ### ✔️ Frontend (Vercel)
+### https://capstonsem3-nzeg.vercel.app/
 
 
 ### ✔️ Backend (Render)
