@@ -271,6 +271,6 @@ Authorization: Bearer <token>
 ---
 
 # Developer  
-**Shivansh Tiwari**  
+**Arun Kumar Giri**  
 
 
